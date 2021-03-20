@@ -1,0 +1,21 @@
+<p>specific-data works!</p>
+  
+<form #updateForm="ngForm" (ngSubmit)="Update(updateForm)">
+    <div class="mainbox">
+        <div class="form-group">
+            <label>Id : </label> 
+            <input type="text" name="id" [(ngModel)]="parsedData.Id" class="form-control" readonly> 
+        </div>
+        <div class="form-group">
+            <label>Name : </label> 
+            <input type="text" name="name" [(ngModel)]="parsedData.Name" class="form-control" required> 
+        </div>
+        <div class="form-group">
+            <label>Email : </label>
+            <input type="email" name="email" [(ngModel)]="parsedData.Email" class="form-control" required> 
+        </div>
+        <div> 
+            <button class="btn btn-success Sbutton" type="submit" [disabled]="updateForm.invalid">Update</button>
+        </div>
+    </div>
+</form>

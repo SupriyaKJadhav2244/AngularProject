@@ -1,0 +1,21 @@
+<p>first-child-page works!</p>
+
+<div>
+   <table class="table table-striped table-bordered table-hover">
+    <thead class="thead-dark">
+           <th>Id</th>
+           <th>Name</th>
+           <th>Email Id</th>
+           <th colspan="2">Operations</th>
+       </thead>
+       <tbody>
+           <tr *ngFor="let values of parsedValue">
+               <td>{{values.Id}}</td>
+               <td>{{values.Name}}</td>
+               <td>{{values.Email}}</td>
+               <td><a class="btn btn-primary" [routerLink]="['./SpecificDataComponent',values.Id]">Edit</a></td>
+               <td><a class="btn btn-danger" (click)="delete(values.Id)">Delete</a></td>
+           </tr>
+       </tbody>
+   </table>
+</div>

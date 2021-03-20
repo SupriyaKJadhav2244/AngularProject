@@ -1,0 +1,27 @@
+<p>third-page works!</p>
+ 
+<table class="table"> 
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Date Of Birth</th>
+            <th>Married</th>
+            <th>Branch</th>
+            <th>Year Of Passing</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let value of Information">
+            <td>{{value.name | customPipe:value.gender:value.married | uppercase}}</td>
+            <td>{{value.gender}}</td>
+            <td>{{value.DOB | date:'longDate'}}</td>
+            <td>{{value.married}}</td>
+            <td>{{value.branch}}</td>
+            <td>{{value.yearOfPassing}}</td>
+            <td>{{value.salary | currency:'INR':'code'}}</td>
+        </tr>
+    </tbody>
+</table> 
+<img src="./assets/download.jpg" height="500px" width="500px">

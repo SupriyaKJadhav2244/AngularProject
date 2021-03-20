@@ -1,0 +1,24 @@
+<p>second-page works!</p>
+
+<a [routerLink]="['./SecondChildComponent']"><button class="btn btn-secondary">Second Child Page</button></a>
+
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm.value)">
+  <div class="mainbox">
+    <div class="form-group">
+      <label for="firstname">First Name </label>
+      <input type="text" formControlName="firstname" class="form-control" placeholder="Enter Your First Name">
+    </div> 
+    <div class="form-group">
+      <label for="lastname">Last Name </label>
+      <input type="text" formControlName="lastname" class="form-control" placeholder="Enter your Last Name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email </label>
+      <input type="text" formControlName="email" class="form-control" placeholder="Enter Your E-Mail Id">
+    </div> 
+    <div>
+      <button class="btn btn-success primary" type="button" (click)="ResetData()">Reset</button>
+      <button type="submit" class="btn btn-success Sbutton">Submit</button>
+    </div>
+  </div> 
+  </form>
